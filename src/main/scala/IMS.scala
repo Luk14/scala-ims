@@ -25,6 +25,7 @@ class IMS {
     actChoice match {
       case Action.CREATE => crudController.create(); getAction(domain, crudController)
       case Action.READ => crudController.read(); getAction(domain, crudController)
+      case Action.READALL => crudController.readAll(); getAction(domain, crudController)
       case Action.UPDATE => crudController.update(); getAction(domain, crudController)
       case Action.DELETE => crudController.delete(); getAction(domain, crudController)
       case Action.RETURN => imsSystem()

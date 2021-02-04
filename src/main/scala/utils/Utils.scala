@@ -19,6 +19,11 @@ class Utils {
     getString().toDoubleOption getOrElse (getDouble())
   }
 
+  def getInt(): Int = {
+    println("Please Enter a Int")
+    getString().toIntOption getOrElse (getInt())
+  }
+
   def firstLetterCap(): String = {
     getString().toLowerCase.capitalize
   }
