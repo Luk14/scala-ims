@@ -22,7 +22,7 @@ object CustomerController extends CrudController[Customer] {
 
   override def create(): String = {
     println("Please Enter the Following in Order | First Name, Last Name, Age [On New Lines]")
-    val customer = Customer(1, utils.getString(), utils.getString(), utils.getInt())
+    val customer =  Customer(0, utils.getString(), utils.getString(), utils.getInt())
     val createdCustomer = Await.result(customerDao.create(customer), 5000 millis)
     println(createdCustomer)
     createdCustomer

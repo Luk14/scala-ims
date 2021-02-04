@@ -1,6 +1,7 @@
 package me.lukasz
 
-import me.lukasz.presistance.domain.Customers
+import presistance.domain.Customers
+
 import slick.jdbc.MySQLProfile.api._
 
 object Runner {
@@ -13,5 +14,4 @@ object Runner {
     val ims = new IMS
     ims.imsSystem()
   }
-
 }
