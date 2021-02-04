@@ -1,3 +1,4 @@
 [debug] not up to date. inChanged = true, force = false
 [debug] Updating ProjectRef(uri("file:/E:/QA-Software/Scala/ims-scala/"), "ims-scala")...
 [debug] Done updating ProjectRef(uri("file:/E:/QA-Software/Scala/ims-scala/"), "ims-scala")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.

@@ -1,0 +1,11 @@
+[debug] > Exec(sbs clean, None, None)
+[error] Expected ID character
+[error] Not a valid command: sbs (similar: tasks, set)
+[error] Expected project ID
+[error] Expected configuration
+[error] Expected ':'
+[error] Expected key
+[error] Not a valid key: sbs (similar: ps, bgList)
+[error] sbs clean
+[error]    ^
+[debug] > Exec(idea-shell, None, None)
