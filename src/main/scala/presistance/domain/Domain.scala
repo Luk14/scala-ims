@@ -1,12 +1,12 @@
 package me.lukasz
 package presistance.domain
 
-import controllers.{CrudController, CustomerController}
+import controllers.{CrudController, CustomerController, ItemController}
 
 object Domain extends Enumeration {
 
   val CUSTOMER = CustomDomain(0, "Customer", crud = CustomerController)
-  val ITEM = Value(1, "Item")
+  val ITEM = CustomDomain(1, "Item", crud = ItemController)
   val ORDER = Value(2, "Order")
   val STOP = Value(3, "Stop")
 

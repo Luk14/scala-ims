@@ -12,12 +12,12 @@ object CustomerDao extends Dao[Customer]{
   val db = Database.forConfig("mysqlDB")
   val customerTable = TableQuery[Customers]
 
-  def readAll(): Future[Seq[Customer]] = {
-    db.run(customerTable.result)
-  }
-
   def read(t: Int): Future[Option[Customer]] = {
     db.run(customerTable.filter(_.id === t).result.headOption)
+  }
+
+  def readAll(): Future[Seq[Customer]] = {
+    db.run(customerTable.result)
   }
 
   def create(t: Customer): Future[String] = {

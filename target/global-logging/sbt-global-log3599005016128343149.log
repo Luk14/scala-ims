@@ -96,3 +96,4 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
 [0m[[0m[0minfo[0m] [0m[0msbt server started at local:sbt-server-bcc242a14e2df1e64200[0m
 [0m[[0m[0minfo[0m] [0m[0mstarted sbt server[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
