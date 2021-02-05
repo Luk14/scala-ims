@@ -5,7 +5,7 @@ import slick.jdbc.MySQLProfile.api._
 
 case class OrderItem(id: Int, cid: Int)
 
-case class OrderItems(tag: Tag) extends Table[OrderItem](tag, "orders") {
+case class OrderItems(tag: Tag) extends Table[OrderItem](tag, "orderItems") {
 
   def oid = column[Int]("OID")
 

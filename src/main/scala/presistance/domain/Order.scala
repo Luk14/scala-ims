@@ -4,7 +4,7 @@ package presistance.domain
 
 import slick.jdbc.MySQLProfile.api._
 
-case class Order(id: Int = 1, cid: Int, option: Option[OrderItem])
+case class Order(id: Int = 1, cid: Int)
 
 case class Orders(tag: Tag) extends Table[Order](tag, "orders") {
 
@@ -12,5 +12,5 @@ case class Orders(tag: Tag) extends Table[Order](tag, "orders") {
 
   def cid = column[Int]("CID")
 
-  def * = (id, cid, opt) <> (Order.tupled, Order.unapply)
+  def * = (id, cid) <> (Order.tupled, Order.unapply)
 }

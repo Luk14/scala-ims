@@ -21,7 +21,7 @@ object OrderDao extends Dao[Order]{
   }
 
   def create(t: Order): Future[String] = {
-    db.run(orderDatabase += t).map(f => "Order has been successfully added").recover {
+    db.run(orderDatabase += t).map(f => s"$f").recover {
       case exception: Exception => exception.getCause.getMessage
     }
   }

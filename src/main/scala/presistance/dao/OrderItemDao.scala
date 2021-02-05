@@ -7,7 +7,7 @@ import slick.jdbc.MySQLProfile.api._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-object OrderOrderItemDao extends Dao[OrderItem] {
+object OrderItemDao extends Dao[OrderItem] {
 
   val db = Database.forConfig("mysqlDB")
   val orderItemDatabase = TableQuery[OrderItems]
