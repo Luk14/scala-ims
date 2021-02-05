@@ -1,7 +1,7 @@
 package me.lukasz
 package presistance.dao
 
-import me.lukasz.presistance.domain.{OrderItem, OrderItems}
+import me.lukasz.presistance.domain.{Items, OrderItem, OrderItems}
 import slick.jdbc.MySQLProfile.api._
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -11,6 +11,7 @@ object OrderItemDao extends Dao[OrderItem] {
 
   val db = Database.forConfig("mysqlDB")
   val orderItemDatabase = TableQuery[OrderItems]
+  val itemDatabase = ItemDao
 
   def read(t: Int): Future[Option[OrderItem]] = {
     db.run(orderItemDatabase.filter(_.oid === t).result.headOption)
